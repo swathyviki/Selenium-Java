@@ -23,7 +23,7 @@ public class FibonacciSeries {
 		
 		// initialize 3 int variables (Tip: range & firstNum, secNum in the series)
 		int range=8;int firstNum =0;int secNum =1;
-		
+		//added dummy comment
 		
 		// Iterate from 1 to the range
 		 for (int i=1; i <=range;i++)
