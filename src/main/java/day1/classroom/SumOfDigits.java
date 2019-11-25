@@ -13,7 +13,7 @@ public class SumOfDigits {
 	 * 2) To create a 'while' loop: type 'while', followed by ctrl + space + enter
 	 *   
 	 * What are my learnings from this code?
-	 * 1)
+	 * 1)sum of digits can be done by summing all remainders when dividing by 10 until number is >0
 	 * 2)
 	 * 3) 
 	 * 
@@ -25,7 +25,7 @@ public class SumOfDigits {
 		int i=123;
 		// Initialize an integer variable by name: sum
 		int sum=0;
-		// Use loop to calculate the sum: which loop to use until the number goes less than 10??
+		// Use loop to calculate the sum: which loop to use until the number goes greater than 0??
 		while(i>0)
 		// Within loop: get the remainder when done by 10 -> Tip: use mod
 		{

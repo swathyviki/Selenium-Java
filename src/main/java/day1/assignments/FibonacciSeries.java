@@ -13,9 +13,9 @@ public class FibonacciSeries {
 	 * 2) To create a 'for' loop: type 'for', followed by ctrl + space + down arrow + enter
 	 *   
 	 * What are my learnings from this code?
-	 * 1)
-	 * 2)
-	 * 3) 
+	 * 1)Fibonacci series is a series formed by adding 2 previous numbers until range
+	 * 2)use for loop to iterate to a range
+	 * 3) in the loop firstnum becomes secnum(also secnum becomes sum) in order to add the next number in the series
 	 * 
 	 */
 	
@@ -27,16 +27,16 @@ public class FibonacciSeries {
 		
 		// Iterate from 1 to the range
 		 for (int i=1; i <=range;i++)
-			// Print first number 
 		 {
+			// Print first number
 			 System.out.print(firstNum+",");
 			// add first and second number
-			int sum= firstNum+secNum;
+			int sum = firstNum+secNum;
 			
 			// Assign second nuumber to the first number
-			firstNum=secNum ;
+			firstNum =secNum ;
 			// Assign sum to the second number
-			secNum=sum;
+			secNum = sum;
 		
 
 	}

@@ -14,9 +14,10 @@ public class ArmstrongNumber {
 	 * 3) To create an 'if' condition: type 'if', followed by ctrl + space +down arrow + enter
 	 *   
 	 * What are my learnings from this code?
-	 * 1)
-	 * 2)
-	 * 3) 
+	 * 1)Logic to find armstrong number-cube the individual digits
+	 * 
+	 * 2)Use while loop whenever calculting until a certain value
+	 * 3) use if loop to check a particular condition
 	 * 
 	 */
 	
@@ -24,7 +25,7 @@ public class ArmstrongNumber {
 		
 		// Declare your input
 		
-		int i =153;
+		int i = 375;
 		// Declare 3 more int variables as calculated, remainder, original (Tip: Initialize calculated alone)
 		int calculated=0; int remainder; int original;
 		
@@ -48,7 +49,12 @@ public class ArmstrongNumber {
 		if (original == calculated)
 			//When it matches print it as Armstrong number
 		{
-			System.out.println("Armstrong number is " + calculated);
+			System.out.println(  original + " is an Armstrong number ");
+		}
+			else
+			{
+			System.out.println(  original  + " is not an Armstrong number ");
+			
 		}
 		
 			

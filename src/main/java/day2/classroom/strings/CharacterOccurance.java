@@ -2,9 +2,7 @@ package day2.classroom.strings;
 
 public class CharacterOccurance {
 
-
 	public static void main(String[] args) {
-
 		// Here is the input
 		String test = "I am getting better with Java";
 
@@ -22,25 +20,7 @@ public class CharacterOccurance {
 				totalCount=totalCount+1;
 				
 			}
-			
 		}
-		
-		// Build the logic to find the count of each
-		/* Pseudo Code:
-			a) Convert the String to character array
-			
-			c) 
-		*/
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		// Print the count here
 		System.out.println("Total count of character("+ch+"): " + totalCount);
 		

@@ -14,9 +14,9 @@ public class PrimeNumber {
 	 * 3) To create an 'if' condition: type 'if', followed by ctrl + space +down arrow + enter
 	 *   
 	 * What are my learnings from this code?
-	 * 1)
-	 * 2)
-	 * 3) 
+	 * 1)Prime number is only divisible by itself and 1
+	 * 2)creating for and if loop using shortcut
+	 * 3)shortcut for multiline comment in eclipse using Ctrl+shift+/
 	 * 
 	 */
 	
@@ -41,7 +41,6 @@ public class PrimeNumber {
 		}
 				
 				
-			
 		// Check the flag (Provide a condition)
 		if(flag==false)
 			// Print 'Prime' when the condition matches
@@ -51,12 +50,10 @@ public class PrimeNumber {
 		}
 		else
 		{
+			// Print 'Not a Prime' when the condition doesn't match 
 				System.out.println(i+"is not a prime number");
 		}
-			// Print 'Not a Prime' when the condition doesn't match 
 			
-		
-
 	}
 
 }

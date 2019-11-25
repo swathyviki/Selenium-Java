@@ -13,8 +13,8 @@ public class Factorial {
 	 * 2) To create a 'for' loop: type 'for', followed by ctrl + space + down arrow + enter
 	 *   
 	 * What are my learnings from this code?
-	 * 1)
-	 * 2)
+	 * 1)logic behind factorial is to  multiply all whole numbers from our chosen number down to 1
+	 * 2)can be done by decrementing the for loop from input till 1 and multiplying each with fact
 	 * 3) 
 	 * 
 	 */	
@@ -29,7 +29,7 @@ public class Factorial {
 		int fact=1;
 
 		// Iterate from 1 to your input (tip: using loop concept)
-		for(int n=1;n<=i;n++)
+		for(int n=i;n>=1;n--)
 		{
 
 			// Within the loop: Multiply fact with the iterator variable (Tip: Assign it to the 'fact' variable)
@@ -38,8 +38,8 @@ public class Factorial {
 		//End of loop
 		
 		}
-		System.out.println("factorial of "+i+" is "+fact );
 		// Print factorial (fact)
+		System.out.println("factorial of "+i+" is "+fact );
 		}
 	
 	}

@@ -16,8 +16,8 @@ public class OddNumbers {
 	 * 
 	 * What are my learnings from this code?
 	 * 
-	 * 1)
-	 * 2)
+	 * 1)using mod operator
+	 * 2)using system.out.print if all output should be on the same line
 	 * 3) 
 	 * 
 	 */
@@ -37,16 +37,10 @@ public class OddNumbers {
 			{
 				
       //	Within loop -> print the odd integer
-				System.out.println("Odd numberis "+i);
+				System.out.print(i+" ");
 			}
 			
 		}
-
-		
-
-		
-
-		
 
 	}
 

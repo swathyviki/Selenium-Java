@@ -4,7 +4,7 @@ public class Mobile {
 
 	public boolean makeCall(long number)
 	{
-		System.out.println("Call" + number);
+		System.out.println("Call " + number);
 		return true;
 		
 	}
@@ -25,7 +25,7 @@ public class Mobile {
 	public static void main(String[] args) {
 		
 		Mobile redmi = new Mobile();
-		boolean makeCall = redmi.makeCall(8870415213L);
+		redmi.makeCall(8870415213L);
 		String sendSMS = redmi.sendSMS("Hello");
 		System.out.println(sendSMS);
 		redmi.shutDown();
