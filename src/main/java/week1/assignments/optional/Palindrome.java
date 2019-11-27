@@ -7,7 +7,20 @@ public class Palindrome {
 				String text = "madam";
 				//Declare another String rev
 				String rev = "";
-				
+				// Iterate over the String in reverse order
+				for (int i = text.length()-1; i>=0; i--) {
+					rev+=text.charAt(i);	
+				}
+				System.out.println("Reversed string is"+rev);
+				if(rev.equals(text))
+				{
+					System.out.println(text+" is a  palindrome");
+				}
+					else
+					{
+						System.out.println(text+" is not a  palindrome");
+					}
+				}
 				//Build a logic to find the given string is palindrome or not
 				/*
 				 * Pseudo Code
@@ -17,5 +30,3 @@ public class Palindrome {
 				 */
 
 	}
-
-}
