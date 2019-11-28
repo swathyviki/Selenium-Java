@@ -44,7 +44,7 @@ public class RemoveDuplicatesWords {
 			//print the each word
 			if(splitText[k]!=null)
 			{
-				System.out.println(splitText[k]);
+				System.out.print(splitText[k]+" ");
 			}
 			
 	     }  

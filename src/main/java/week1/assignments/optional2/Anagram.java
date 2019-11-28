@@ -1,4 +1,4 @@
-package week1.assignments.optional;
+package week1.assignments.optional2;
 
 import java.util.Arrays;
 
