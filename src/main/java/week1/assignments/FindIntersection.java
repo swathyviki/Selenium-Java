@@ -1,6 +1,6 @@
 package week1.assignments;
 
-import org.apache.poi.hssf.record.FooterRecord;
+
 
 public class FindIntersection {
 

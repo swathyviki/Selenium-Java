@@ -12,6 +12,7 @@ public class RemoveDuplicatesWords {
 		
 		for(int i=0; i< splitText.length;i++)
 		{
+			
 			if(splitText[i]!=null)
 			{
 			//Initialise another loop to check whether the word is there in the array 
@@ -22,6 +23,8 @@ public class RemoveDuplicatesWords {
 				if(splitText[i].equals(splitText[j]))
 				{
 					count=count+1;
+					System.out.println(splitText[i]+","+splitText[j]+","+count);
+					
 				}
 				else
 				{

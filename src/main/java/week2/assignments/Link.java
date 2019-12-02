@@ -18,14 +18,15 @@ public class Link {
 		//driver.findElementByLinkText("Go to Home Page").click();
 		//driver.findElementByLinkText("Find where am supposed to go without clicking me?").click();
 				//driver.findElementByLinkText("Verify am I broken?").click();
-		System.out.println(driver.findElementByLinkText("Go to Home Page").getAttribute("href"));
+		//System.out.println(driver.findElementByLinkText("Go to Home Page").getAttribute("href"));
 		
-		System.out.println("Second link to home page");
-		driver.findElementByXPath("/html/body/div/div/div[3]/section/div[4]/div/div/a").click();
+		//System.out.println("Second link to home page");
+		//driver.findElementByXPath("/html/body/div/div/div[3]/section/div[4]/div/div/a").click();
 		//driver.findElementByLinkText("How many links are available in this page?").click();
 		
 		//System.out.println("Last Link enabled?"+driver.findElementByLinkText("How many links are available in this page?").isEnabled());
-		//System.out.println("Last Link enabled?"+driver.findElementByXPath("/html/body/div/div/div[3]/section/div[5]/div/div/a").isEnabled());
+		driver.findElementByXPath("/html/body/div/div/div[3]/section/div[5]//div/div/a").click();
+		System.out.println("Last Link enabled?"+driver.findElementByXPath("/html/body/div/div/div[3]/section/div[5]//div/div/a").isEnabled());
 		
 		
 	}

@@ -18,6 +18,8 @@ public class ChangeOddIndexToUpper {
 						if the index is odd else don't change*/
 						System.out.print(Character.toUpperCase(charArray[i]));
 					}
+					else
+						System.out.print(charArray[i]);
 					
 				}
 	}
