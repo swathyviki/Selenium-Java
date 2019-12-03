@@ -13,8 +13,9 @@ public class EditLead {
 		
 		ChromeDriver driver = new ChromeDriver();
 		// Maximize the browser
-		driver.manage().window().maximize();
+	
 		driver.get("http://leaftaps.com/opentaps/control/main");
+		driver.manage().window().maximize();
 		// Enter the UserName
 		WebElement username = driver.findElementById("username");
 		username.sendKeys("DemoSalesManager");
@@ -43,6 +44,7 @@ public class EditLead {
 		driver.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-firstName']/a)[1]").click();
 		//Click Edit
 		driver.findElementByLinkText("Edit").click();
+
 		//Change Company name
 		driver.findElementById("updateLeadForm_companyName").clear();
 		driver.findElementById("updateLeadForm_companyName").sendKeys("TCS");
