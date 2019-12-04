@@ -28,13 +28,13 @@ public class DuplicateLead {
 		// Click on Login Button
 		driver.findElementByClassName("decorativeSubmit").click();
 		// Click on crm/sfa button
-		driver.findElementByLinkText("CRM/SFA").click();
+		driver.findElementByLinkText("CRM/SFA").click();driver.findElementByXPath("//span[text()='Email']").click();
 		// Click on Leads
 		driver.findElementByLinkText("Leads").click();
 		//Click Find leads
 		driver.findElementByLinkText("Find Leads").click();
 		//Click on Email
-		driver.findElementByXPath("//span[text()='Email']").click();
+		
 		driver.findElementByName("emailAddress").sendKeys("vigneshkandiah@gmail.com");
 		driver.findElementByXPath("//button[text()='Find Leads']").click();
 		//capture name of first resuting lead

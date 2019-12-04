@@ -4,17 +4,18 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class dropDown {
 	public static void main(String[] args) {
 
 		// Set the property for ChromeDriver
-		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+		System.setProperty("webdriver.gecko.driver", "./driver/geckodriver.exe");
 
 		// Initiate the ChromeBroswer
 		
-		ChromeDriver driver = new ChromeDriver();
+		FirefoxDriver driver = new FirefoxDriver();
 		// Maximize the browser
 		driver.manage().window().maximize();
 		driver.get("http://leafground.com/pages/Dropdown.html");

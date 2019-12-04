@@ -15,8 +15,9 @@ public class CreateLead {
 		
 		ChromeDriver driver = new ChromeDriver();
 		// Maximize the browser
-		driver.manage().window().maximize();
+	
 		driver.get("http://leaftaps.com/opentaps/control/main");
+		driver.manage().window().maximize();
 		// Enter the UserName
 		WebElement username = driver.findElementById("username");
 		username.sendKeys("DemoSalesManager");
@@ -36,7 +37,7 @@ public class CreateLead {
 		
 		// Enter First Name
 		driver.findElementById("createLeadForm_firstName").sendKeys("Swathy");
-		String CName="Swathy";
+		String fName="Swathy";
 		// Enter Last Name
 		driver.findElementById("createLeadForm_lastName").sendKeys("viki");
 		
@@ -118,8 +119,9 @@ public class CreateLead {
 		driver.findElementByClassName("smallSubmit").click();
 
 		// Verify the Lead is created by checking the Company or First Name
-		String ViewLeadCNAme=driver.findElementById("viewLead_firstName_sp").getText();
-		if (CName.equals(ViewLeadCNAme))
+		String viewLeadFNAme=driver.findElementById("viewLead_firstName_sp").getText();
+		if (fName.equals(viewLeadFNAme))
+			
 		{
 			System.out.println("Lead is created");
 			
