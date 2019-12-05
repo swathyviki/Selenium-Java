@@ -1,24 +1,12 @@
 package week2.assignment.optional;
 
 
-import java.time.LocalDateTime;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import cucumber.api.java.it.Date;
 
 public class RedBus {
 	
@@ -27,7 +15,9 @@ public class RedBus {
 
 		// Initiate the ChromeBroswer
 		
-		ChromeDriver driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--disable-notifications");
+		ChromeDriver driver=new ChromeDriver(options);
 		// Maximize the browser
 	  driver.get("https://www.redbus.in/");
 	 
@@ -78,7 +68,7 @@ public class RedBus {
 	    System.out.println("reached search button");
 	   
 	    Thread.sleep(3000);
-	    driver.quit();
+	    //driver.quit();
 	    
 }
 }
