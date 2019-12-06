@@ -25,6 +25,7 @@ public class CreateLead {
 		password.sendKeys("crmsfa");
 		// Click on Login Button
 		driver.findElementByClassName("decorativeSubmit").click();
+		System.out.println(driver.findElementByClassName("decorativeSubmit").getAttribute("value"));
 		// Click on crm/sfa button
 		driver.findElementByLinkText("CRM/SFA").click();
 		// Click on Leads

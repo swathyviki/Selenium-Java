@@ -17,7 +17,7 @@ public static void main(String[] args) {
 	driver.manage().window().maximize();
 	WebElement drag = driver.findElementById("draggable");
 	Actions builder=new Actions(driver);
-	builder.dragAndDropBy(drag, 100, 50).perform();
+	builder.dragAndDropBy(drag,300,30).perform();
 	
 }
 }

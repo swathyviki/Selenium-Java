@@ -1,8 +1,11 @@
 package week2.assignment.optional;
 
 import org.openqa.selenium.WebElement;
+import java.util.List;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+
+import net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor.ForAttachment;
 
 public class Flipkartmi {
 	public static void main(String[] args) throws InterruptedException {
@@ -38,7 +41,14 @@ else
 	
 }
 //Print all the phone names
-WebElement noofresults = driver.findElementByTagName("a");
-System.out.println(noofresults.getSize());
+List <WebElement> phonename= driver.findElementsByXPath("//div[@class='col col-7-12']/div[1]");
+
+for (WebElement webElement : phonename) {
+	System.out.println(webElement.getText());	
+}
+	
+
+
+
 }
 }

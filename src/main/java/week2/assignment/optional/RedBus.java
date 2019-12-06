@@ -31,12 +31,18 @@ public class RedBus {
 	    
 	    //Enter From station as Chennai
 	   
-	    driver.findElementByXPath("//input[@data-message='Please enter a source city']").sendKeys("Koyambedu, Chennai",Keys.TAB);
+	   WebElement source= driver.findElementByXPath("//input[@data-message='Please enter a source city']");
+	   source.sendKeys("Chennai");
+	   Thread.sleep(2000);
+	   source.sendKeys(Keys.TAB);
 	    //Enter To (Trichy) and Tab
 	    
 	    
 	    
-	    driver.findElementByXPath("//input[@data-message='Please enter a destination city']").sendKeys("Kallakudi (Trichy)",Keys.TAB);
+	    WebElement destination= driver.findElementByXPath("//input[@data-message='Please enter a destination city']");
+	    		destination.sendKeys("Trichy");
+	    		Thread.sleep(2000);
+	    destination.sendKeys(Keys.TAB);
 	    //Entering onward date
 	  //select month
 	    
@@ -68,7 +74,18 @@ public class RedBus {
 	    System.out.println("reached search button");
 	   
 	    Thread.sleep(3000);
-	    //driver.quit();
-	    
+	   // Click After 6 PM checkbox 
+	    WebElement checkbx = driver.findElementByXPath("//input[@id='dtAfter 6 pm'][1]/following::label");
+	    Thread.sleep(1000);
+	    checkbx.click();
+	   // 9) Click Bus Type (AC) Checkbox 
+	    WebElement checkAC = driver.findElementByXPath("//label[@for='bt_AC'][1]");
+	    Thread.sleep(2000);
+	    checkAC.click();
+	   // 10) Print number of buses found
+	    WebElement Busescount = driver.findElementByXPath("//span[@class='f-bold busFound']");
+	    System.out.println(Busescount.getText()+"Found");
+	    driver.close();
+	}
 }
-}
+

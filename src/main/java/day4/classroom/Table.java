@@ -21,27 +21,35 @@ public class Table {
 		    elesource.sendKeys("MAS",Keys.TAB);
 		    WebElement eledestiny = driver.findElementById("txtStationTo");
 		    eledestiny.clear();
-		    eledestiny.sendKeys("SBC",Keys.TAB);
+		    eledestiny.sendKeys("BNC",Keys.TAB);
 		    Thread.sleep(3000);
 		    driver.findElementById("chkSelectDateOnly").click();
+		    WebElement noTrains = driver.findElementByXPath("//div[@id='divMain']/div[1]");
+		    System.out.println(noTrains.getText());
+		    if(noTrains.getText()==null)
+		    {
 		    WebElement eletable = driver
 		    		.findElementByXPath("//table[@class='DataTable TrainList TrainListHeader']");
+		    if(eletable!=null)
+		    {
 		    List<WebElement> row = eletable.findElements(By.tagName("tr"));
 		    //to print train names
-		    /*
+		    
 		    for (int i = 0; i < row.size(); i++) {
 		    	List<WebElement> coldata = row.get(i).findElements(By.tagName("td"));
-		    	System.out.println(coldata.get(1).getText());
+		    	System.out.println(coldata.get(0).getText());
 		    	
 				
-			}*/
+			}
+		    }
+		    }
 		    //to get all values for 1 column
-		    List<WebElement> eleCols = row.get(1).findElements(By.tagName("td"));
+		    /*List<WebElement> eleCols = row.get(1).findElements(By.tagName("td"));
 		    for (int i = 0; i < eleCols.size(); i++) {
 				System.out.println(eleCols.get(i).getText());
 		     
 		    
-	}
+	}*/
 
 }
 }

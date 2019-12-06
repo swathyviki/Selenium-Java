@@ -19,7 +19,7 @@ public class CheckBox {
 			driver.findElementByXPath("//*[@id=\"contentblock\"]/section/div[1]//input[1]").click();
 			System.out.println(driver.findElementByXPath("//*[@id=\"contentblock\"]/section/div[1]"
 					+ "//input[1]").isSelected());
-			
+			driver.findElementByXPath("/html/body/div/div/div[3]/section/div[2]/input[1]").click();
 }		
 
 }
