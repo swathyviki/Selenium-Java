@@ -4,7 +4,7 @@ public class Mobile {
 	
 	public void Call(){
 		System.out.println("Call connected");
-		
+
 	}
 	public void sendSMS(String sms) {
 		

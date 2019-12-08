@@ -1,6 +1,9 @@
 package day5.classroom;
 
 public class Samsung extends Mobile{
+	public void Call() {
+		System.out.println("Calling from Samsung phone");
+	}
 	public void camera(String cameratype,int resolution)
 	{
 		System.out.println(cameratype+":");
