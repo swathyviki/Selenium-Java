@@ -1,6 +1,7 @@
 package day4.classroom;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -18,6 +19,7 @@ public class Table {
 		    driver.manage().window().maximize();
 		    WebElement elesource = driver.findElementById("txtStationFrom");
 		    elesource.clear();
+		    driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
 		    elesource.sendKeys("MAS",Keys.TAB);
 		    WebElement eledestiny = driver.findElementById("txtStationTo");
 		    eledestiny.clear();

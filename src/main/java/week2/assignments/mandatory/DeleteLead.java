@@ -1,5 +1,7 @@
 package week2.assignments.mandatory;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -68,7 +70,7 @@ public class DeleteLead {
 			//Click on Find Leads button
 			driver.findElementByXPath("//button[text()='Find Leads']").click();
 			//Verify message no records to display in the lead list.This message confirms successful deletion
-			String NoRecords=driver.findElementByXPath("/html/body/div[6]/div/div[2]/div[2]/div/div/div/div/div/div[3]/div/div/div/div[2]/div[1]/div/div/div[2]/div/div").getText();
+			String NoRecords=driver.findElementByClassName("x-paging-info").getText();
 			System.out.println(NoRecords);
 			if(NoRecords.equals("No records to display"))
 					{
@@ -78,6 +80,7 @@ public class DeleteLead {
 			{
 				System.out.println("Record still exists");
 					}
+			 driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
 			driver.close();
 }
 }

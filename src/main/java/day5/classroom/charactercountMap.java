@@ -3,24 +3,29 @@ import java.util.*;
 import java.util.Map.Entry;
 public final class charactercountMap {
 	public static void main(String[] args) {
-		String name="Swaathy";
+		String name="Preethi Sylvia";
+		name=name.replaceAll("\\s", "");
+		System.out.println(name);
 		char[] nameArray=name.toCharArray();
 		Map<Character,Integer> nameMap=new LinkedHashMap<>();
-		int value=1;
-		for(int i=0;i<nameArray.length;i++)
+		
+	for (char c : nameArray) {
+		if(nameMap.containsKey(c))
 		{
+			Integer value=nameMap.get(c)+1;
+			nameMap.put(c,value);
 			
-			if(nameMap.containsKey(nameArray[i]))
-			{
-				nameMap.put(nameArray[i],value+1);
-				
-			}
-			else
-			{
-				nameMap.put(nameArray[i],value);
-				
-			}
+		}
+		else
+		{
+			nameMap.put(c,1);
+			
+		}
 	}
+		
+			
+			
+	
 		for(Entry<Character,Integer> eachentry:nameMap.entrySet())
 		System.out.println(eachentry.getKey()+"->"+eachentry.getValue());
 	}
