@@ -1,7 +1,14 @@
 package Projectday;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -16,7 +23,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class zoomcars {
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, ParseException {
 		
 	System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 
@@ -36,11 +43,32 @@ public class zoomcars {
 	//Click on the Next button
 	driver.findElementByClassName("proceed").click();
 	//Specify the Start Date as tomorrow Date
-	driver.findElementByXPath("//div[@class='day'][1]/div").click();
+
+	
+	SimpleDateFormat sdfDate = new SimpleDateFormat("MMM E dd");//dd/MM/yyyy
+    Date now = new Date();
+	Calendar calendar = Calendar.getInstance();
+    
+    // get a date to represent "today"
+    calendar.setTime(now);
+    // add one day to the date/calendar
+    calendar.add(Calendar.DATE, 1);
+    
+    // now get "tomorrow"
+    String tomorrow = sdfDate.format(calendar.getTime());
+    
+    // print out tomorrow's date
+    System.out.println("tomorrow: " + tomorrow.toUpperCase());
+   
+    
+	String tomorrowdate = driver.findElementByXPath("//div[@class='day'][1]").getText();
+	String month=driver.findElementByXPath("//div[@class='month picked']").getText();
+	System.out.println(month+" "+ tomorrowdate.replaceAll("\\n", " "));
+	
 	Thread.sleep(1000);
 
 	//Click on the Next Button
-	driver.findElementByClassName("proceed").click();
+	driver.findElementByClassName("proceed").click();;
 	//Confirm the Start Date and Click on the Done button
 	driver.findElementByXPath("//div[@class='day'][1]/div").click();
 	Thread.sleep(2000);
@@ -102,6 +130,8 @@ for (int i=1;i<=carcount;i++) {
 		}
 	//Close the Browser.
 	driver.close();
+	
+	
 	}
 }
 
