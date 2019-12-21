@@ -6,9 +6,11 @@ import java.util.Set;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class MergeLeads {
-	public static void main(String[] args) throws InterruptedException {
+	@Test
+	public void mergeLeads() throws InterruptedException {
 
 		// Set the property for ChromeDriver
 		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");

@@ -1,14 +1,16 @@
 package week2.assignments;
 
-import java.util.List;
 
-import org.openqa.selenium.By;
+
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+
+import org.testng.annotations.Test;
 
 public class DuplicateLead {
-	public static void main(String[] args) throws InterruptedException {
+	@Test
+	public  void duplicateLead() throws InterruptedException {
 
 		// Set the property for ChromeDriver
 		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");

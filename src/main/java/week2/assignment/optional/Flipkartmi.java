@@ -24,13 +24,16 @@ driver.manage().window().maximize();
 driver.findElementByXPath("/html/body/div[2]/div/div/button").click();
 //Hover the cursor on Electronics
 
-driver.findElementByXPath("//span[text()='Electronics']").click();
+WebElement electronics = driver.findElementByXPath("//span[text()='Electronics']");
+Actions builder=new Actions(driver);
+builder.moveToElement(electronics).build().perform();
 //click on Mi
 WebElement Mi=driver.findElementByXPath("//a[text()='Mi']");
-Actions builder=new Actions(driver);
-builder.moveToElement(Mi);
+Actions builder1=new Actions(driver);
+builder1.moveToElement(Mi);
+
+builder1.click(Mi).perform();
 Thread.sleep(2000);
-builder.click(Mi).perform();
 String title=driver.getTitle();
 //Verify title contains Mi phone
 System.out.println("Title is"+title);

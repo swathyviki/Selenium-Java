@@ -2,9 +2,11 @@ package week2.assignments.mandatory;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class EditLead {
-	public static void main(String[] args) throws InterruptedException {
+	@Test
+	public void EditLead() throws InterruptedException {
 
 		// Set the property for ChromeDriver
 		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
